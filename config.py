@@ -6,27 +6,26 @@ from dotenv import load_dotenv
 from pyrogram import filters
 
 load_dotenv()
+API_ID = int(getenv("API_ID","22766050"))
+API_HASH = getenv("092af0023f22b00248071887b1a74efa")
 
-API_ID = int(getenv("API_ID"))
-API_HASH = getenv("API_HASH")
+BOT_TOKEN = getenv("6093398509:AAHFx1r9qJrOviEZUKnVcm_2g15IU298cS0")
 
-BOT_TOKEN = getenv("BOT_TOKEN")
+MONGO_DB_URI = getenv("mongodb+srv://marvel:marvel@marvelcloud0.gse7lpr.mongodb.net/?retryWrites=true&w=majority")
+LOG_GROUP_ID = int(getenv("LOG_GROUP_ID","-1001755297039"))
+MUSIC_BOT_NAME = getenv("MUSIC_BOT_NAME","𝐋ɪғᴇ 𝐋ɪɴᴇ 𝐌ᴜsɪᴄ")
 
-MONGO_DB_URI = getenv("MONGO_DB_URI", None)
-LOG_GROUP_ID = int(getenv("LOG_GROUP_ID"))
-MUSIC_BOT_NAME = getenv("MUSIC_BOT_NAME", "ᴀɴᴏɴ ダ ᴍᴜsɪᴄ")
-
-OWNER_ID = list(map(int, getenv("OWNER_ID", "1356469075").split()))
+OWNER_ID = list(map(int, getenv("OWNER_ID", "5465568465").split()))
 
 HEROKU_API_KEY = getenv("HEROKU_API_KEY", None)
 HEROKU_APP_NAME = getenv("HEROKU_APP_NAME", None)
 
-UPSTREAM_REPO = getenv("UPSTREAM_REPO", "https://github.com/AnonymousX1025/AnonXMusic")
+UPSTREAM_REPO = getenv("UPSTREAM_REPO", "https://github.com/Kassim-the-devil/Darlzzzmusic")
 UPSTREAM_BRANCH = getenv("UPSTREAM_BRANCH", "master")
 GIT_TOKEN = getenv("GIT_TOKEN", None)
 
-SUPPORT_CHANNEL = getenv("SUPPORT_CHANNEL", "https://t.me/FallenAssociation")
-SUPPORT_GROUP = getenv("SUPPORT_GROUP", "https://t.me/DevilsHeavenMF")
+SUPPORT_CHANNEL = getenv("SUPPORT_CHANNEL", "https://t.me/DarlzzzBots")
+SUPPORT_GROUP = getenv("SUPPORT_GROUP", "https://t.me/TaMilChAtLiFeLiNeGrOuP")
 
 SUPPORT_HEHE = SUPPORT_GROUP.split("me/")[1]
 
@@ -58,8 +57,7 @@ TG_AUDIO_FILESIZE_LIMIT = int(getenv("TG_AUDIO_FILESIZE_LIMIT", "104857600"))
 TG_VIDEO_FILESIZE_LIMIT = int(getenv("TG_VIDEO_FILESIZE_LIMIT", "1073741824"))
 # https://www.gbmb.org/mb-to-bytes
 
-STRING1 = getenv("STRING_SESSION", None)
-STRING2 = getenv("STRING_SESSION2", None)
+STRING1 = getenv("STRING_SESSION1", "BQBtsxhu_dn805GoV1koQBb-1FyiO1Pvn0NGbd7fTVdAxzhbOflEGUPWHmAAPJZUySeeQzif6Ug9XHmVWTfm2ITLJnX_2O20IG26cpM6FDGAoIMq_pOSKg_J18DEL2ZVme7MwA62PU9WqK_-Sx71_cExehlaZ1d66NCmNDmGA-xizoPdXrXOPgITslWdXYK6bwaTl6zEopR3Up47KOXOnFRQaLEAy4zsu_U4Kt0ZF2z46_J007B4oFhy4uWhRr3F7DFY04J3jzgfLzI2y9ipyvvxp-3wmsCjzfSvIWSjf3ymwOXqDfcb2t9oTYh6hynTHbzvtEHjR_Ua0a8MyvNg6jOeAAAAAXdXCY8A")
 STRING3 = getenv("STRING_SESSION3", None)
 STRING4 = getenv("STRING_SESSION4", None)
 STRING5 = getenv("STRING_SESSION5", None)
@@ -67,7 +65,7 @@ STRING5 = getenv("STRING_SESSION5", None)
 BANNED_USERS = filters.user()
 YTDOWNLOADER = 1
 LOG = 2
-LOG_FILE_NAME = "logs.txt"
+LOG_FILE_NAME = "anonxlogs.txt"
 adminlist = {}
 lyrical = {}
 chatstats = {}
@@ -76,11 +74,11 @@ clean = {}
 autoclean = []
 
 
-START_IMG_URL = getenv("START_IMG_URL", "https://te.legra.ph/file/56d1760224589ee370186.jpg")
+START_IMG_URL = getenv("START_IMG_URL", "https://te.legra.ph/file/0693276d9efea6e926b35.jpg")
 
 PING_IMG_URL = getenv(
     "PING_IMG_URL",
-    "https://telegra.ph/file/56d1760224589ee370186.jpg",
+    "https://te.legra.ph/file/0693276d9efea6e926b35.jpg",
 )
 
 PLAYLIST_IMG_URL = "https://te.legra.ph/file/4ec5ae4381dffb039b4ef.jpg"
@@ -132,7 +130,10 @@ if PING_IMG_URL:
         if not re.match("(?:http|https)://", PING_IMG_URL):
             PING_IMG_URL = "https://telegra.ph/file/56d1760224589ee370186.jpg"
 
+
 if START_IMG_URL:
     if START_IMG_URL != "assets/Ping.jpeg":
         if not re.match("(?:http|https)://", START_IMG_URL):
             START_IMG_URL = "https://te.legra.ph/file/56d1760224589ee370186.jpg"
+
+
